@@ -20,10 +20,7 @@ namespace VetoreExercicio4
             for (int i = 1; i < idades.Length; i++) {
                 if (!(idades[i] < idades[countMaioridade])) {
                     countMaioridade++;
-                }
-                else {
-                    countMaioridade++;
-                }
+                }   
             }
             Console.WriteLine("Pessoa mais velha: {0}", pessoas[countMaioridade]);
         }
