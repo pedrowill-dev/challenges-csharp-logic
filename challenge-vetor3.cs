@@ -26,11 +26,15 @@ namespace VetoreExercicio4
             for (int i = 1; i < quantidadePessoas; i++) {
                 if (alturas[i] < alturas[countMinoridade]) {
                     countMinoridade++;
-                } else {
+                }
+            }
+
+            for (int i = 1; i < quantidadePessoas; i++) {
+                if (!(alturas[i] < alturas[countMaioridade])) {
                     countMaioridade++;
                 }
             }
-            
+
             for (int i = 0; i < quantidadePessoas; i++) {
                 if (sexo[i] == 'F') {
                     media += alturas[i];
@@ -41,12 +45,10 @@ namespace VetoreExercicio4
             }
 
             media = media / countMulheres;
-
             Console.WriteLine("Menor altura: {0}", alturas[countMinoridade]);
             Console.WriteLine("Maior altura: {0}", alturas[countMaioridade]);
             Console.WriteLine("Média das alturas das mulheres: {0}", media.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Numero de homens: {0}", countHomens);
-
         }
     }
 }
