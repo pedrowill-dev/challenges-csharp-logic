@@ -45,10 +45,12 @@ namespace VetoreExercicio4
             }
 
             media = media / countMulheres;
-            Console.WriteLine("Menor altura: {0}", alturas[countMinoridade]);
-            Console.WriteLine("Maior altura: {0}", alturas[countMaioridade]);
+
+            Console.WriteLine("Menor altura: {0}", alturas[countMinoridade].ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Maior altura: {0}", alturas[countMaioridade].ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Média das alturas das mulheres: {0}", media.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Numero de homens: {0}", countHomens);
+
         }
     }
 }
